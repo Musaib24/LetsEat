@@ -87,13 +87,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="7" minimumInteritemSpacing="0.0" id="1Aa-n5-6Pt">
                                     <size key="itemSize" width="176" height="195"/>
-                                    <size key="headerReferenceSize" width="0.0" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="100"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="7" minY="7" maxX="7" maxY="7"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="exploreCell" id="MHC-PK-o4w">
-                                        <rect key="frame" x="7" y="57" width="176" height="195"/>
+                                        <rect key="frame" x="7" y="107" width="176" height="195"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="195"/>
@@ -106,18 +106,64 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="yqa-v3-Uz7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jp-nT-ugf">
-                                            <rect key="frame" x="321" y="8" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtP-gv-CYJ">
+                                            <rect key="frame" x="0.0" y="30" width="375" height="60"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaP-XR-K2k">
+                                            <rect key="frame" x="8" y="8" width="58.5" height="82"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMc-7c-yV1">
+                                                    <rect key="frame" x="8" y="45" width="255" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VH7-qb-LCY">
+                                                    <rect key="frame" x="8" y="24" width="34.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="7Im-xe-Eoi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                    <color key="textColor" name="LetsEat Light Grey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="VH7-qb-LCY" firstAttribute="leading" secondItem="RaP-XR-K2k" secondAttribute="leading" constant="8" id="Pn1-CE-m7a"/>
+                                                <constraint firstAttribute="trailing" secondItem="VH7-qb-LCY" secondAttribute="trailing" constant="16" id="bSz-0n-G1n"/>
+                                                <constraint firstItem="VH7-qb-LCY" firstAttribute="top" secondItem="RaP-XR-K2k" secondAttribute="top" constant="24" id="tYi-g3-05Y"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jp-nT-ugf">
+                                            <rect key="frame" x="271" y="5" width="96" height="25"/>
+                                            <color key="backgroundColor" name="LetsEat Light Grey"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="vSo-3h-jMR"/>
+                                                <constraint firstAttribute="width" constant="96" id="wTD-3f-jZo"/>
+                                            </constraints>
+                                            <state key="normal" image="btn-location"/>
                                             <connections>
                                                 <segue destination="9i5-Pf-rPK" kind="presentation" id="HpM-Lr-j1Q"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="RaP-XR-K2k" secondAttribute="bottom" constant="10" id="DbC-TI-vLb"/>
+                                        <constraint firstItem="jtP-gv-CYJ" firstAttribute="top" secondItem="5jp-nT-ugf" secondAttribute="bottom" id="FPl-hT-aQz"/>
+                                        <constraint firstAttribute="trailing" secondItem="5jp-nT-ugf" secondAttribute="trailing" constant="8" id="IRs-6g-wMN"/>
+                                        <constraint firstAttribute="bottom" secondItem="jtP-gv-CYJ" secondAttribute="bottom" constant="10" id="L0r-Qv-vnH"/>
+                                        <constraint firstAttribute="trailing" secondItem="jtP-gv-CYJ" secondAttribute="trailing" id="TWN-Rk-dd1"/>
+                                        <constraint firstItem="RaP-XR-K2k" firstAttribute="leading" secondItem="yqa-v3-Uz7" secondAttribute="leading" constant="8" id="UL4-Jr-dD4"/>
+                                        <constraint firstItem="5jp-nT-ugf" firstAttribute="top" secondItem="yqa-v3-Uz7" secondAttribute="top" constant="5" id="aqf-Ko-dvl"/>
+                                        <constraint firstItem="RaP-XR-K2k" firstAttribute="top" secondItem="yqa-v3-Uz7" secondAttribute="top" constant="8" id="gfD-Xn-SQo"/>
+                                        <constraint firstItem="jtP-gv-CYJ" firstAttribute="leading" secondItem="yqa-v3-Uz7" secondAttribute="leading" id="j8T-xZ-88J"/>
+                                    </constraints>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="jBA-H4-che" id="ppw-ZC-1SX"/>
@@ -377,12 +423,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn-location" width="96" height="25"/>
         <image name="icon-explore-off" width="35" height="23"/>
         <image name="icon-explore-on" width="35" height="23"/>
         <image name="icon-map-off" width="16" height="22"/>
         <image name="icon-map-on" width="16" height="22"/>
         <namedColor name="Demo Grey">
             <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LetsEat Light Grey">
+            <color red="0.68627450980392157" green="0.68627450980392157" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
